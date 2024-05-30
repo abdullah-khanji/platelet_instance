@@ -27,18 +27,24 @@ def extract_images_from_tif(tif_path, output_folder):
         print(f"Saved {output_path}")
 
 if __name__ == "__main__":
-    # Example usage
+    #labels
+    # labels=['./unorganized/labels-instance/50-instance-cell.tif']
+    # output_labels = ['./data/Cells']
     
-    labels=['./platelet-em/labels-semantic/24-semantic.tif']
-    output_labels = ['./data/test_labels']
-   
-
+    #images
+    images_path= ['./unorganized/images/50-images.tif', './unorganized/images/24-images.tif']
+    output_images= ['./data/train_images/', './data/test_images/']
+    
     # images_paths=['./platelet_data/train-images.tif', './platelet_data/eval-images.tif']
     # labels=['./platelet_data/train-labels.tif', './platelet_data/eval-labels.tif']
     # output_images=['./data/output/train_images/', './data/output/val_images/']
     # output_labels=['./data/output/train_labels/', './data/output/val_labels/']
 
-        
-    for i in range(0, len(labels)):
-        extract_images_from_tif(labels[i], output_labels[i])
+    #for labels
+    # for i in range(0, len(labels)):
+    #     extract_images_from_tif(labels[i], output_labels[i])
+    
+    
+    for i in range(0, len(images_path)):
+        extract_images_from_tif(images_path[i], output_images[i])
 

@@ -118,7 +118,7 @@ def images_annotations_info(maskpath):
             # Create or find existing image annotation
             if original_file_name not in map(lambda img: img['file_name'], images):
                 image = {
-                    "id": image_id+1,
+                    "id": image_id,
                     "width": width,
                     "height": height,
                     "file_name": original_file_name,
